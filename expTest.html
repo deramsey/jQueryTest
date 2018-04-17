@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<style type="text/css">
+
+* {
+	font-family: sans-serif;
+}
+
+.seHead {
+	color: #1773de;
+	width: 100%;
+	padding: 10px;
+	background-color: #ccc;
+	box-sizing: border-box;
+	border: 1px solid black;
+	margin: 0 auto;
+}
+
+section{
+	border: 1px solid black;
+}
+
+.seHead:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.expVal{
+	float: right;
+}
+
+.seContent{
+	padding: 10px;
+}
+
+</style>
+
+<script>
+$( document ).ready(function(){
+	$(".seContent").hide();
+
+	$(".seHead").on("click", function(){
+	if ($(this).children(".expVal").text() === "+"){
+	$(this).children(".expVal").text("-");
+	}
+	else {
+	$(this).children(".expVal").text("+");
+	};
+
+	$(this).parent().children(".seContent").toggle();
+	});
+	
+	$(".seHead").on("mouseenter", function(){
+	if ($(this).children(".expVal").text() === "+"){
+	$(this).attr("title", "Click to Expand");
+	}
+	else {
+	$(this).attr("title", "Click to Contract");
+	};
+});
+});
+</script>
+
+</head>
+<body>
+<section>
+<h1 class="seHead">Head 1 <span class="expVal">+</span></h1>
+<p class="seContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum erat non leo dapibus, et blandit lectus lobortis. Sed rhoncus tempus posuere. Etiam et mauris ex. Integer viverra nulla nec ipsum blandit consectetur. Praesent neque nunc, vestibulum nec accumsan nec, placerat a orci. Praesent suscipit mauris eget mauris posuere, quis condimentum nisl fermentum. Etiam venenatis sem et finibus molestie. Donec ut facilisis sem. Duis in tempus tortor, eget fringilla lacus. In dapibus augue quis leo auctor, vel consectetur mi dapibus. Aliquam vitae turpis urna. Sed ipsum ligula, dapibus ac erat sit amet, maximus sodales eros. Pellentesque vitae dui volutpat, gravida mauris nec, sollicitudin justo. Aliquam eu bibendum lectus.</p>
+</section>
+<section>
+<h1 class="seHead">Head 2 <span class="expVal">+</span></h1>
+<p class="seContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum erat non leo dapibus, et blandit lectus lobortis. Sed rhoncus tempus posuere. Etiam et mauris ex. Integer viverra nulla nec ipsum blandit consectetur. Praesent neque nunc, vestibulum nec accumsan nec, placerat a orci. Praesent suscipit mauris eget mauris posuere, quis condimentum nisl fermentum. Etiam venenatis sem et finibus molestie. Donec ut facilisis sem. Duis in tempus tortor, eget fringilla lacus. In dapibus augue quis leo auctor, vel consectetur mi dapibus. Aliquam vitae turpis urna. Sed ipsum ligula, dapibus ac erat sit amet, maximus sodales eros. Pellentesque vitae dui volutpat, gravida mauris nec, sollicitudin justo. Aliquam eu bibendum lectus.</p>
+</section>
+<section>
+<h1 class="seHead">Head 3 <span class="expVal">+</span></h1>
+<p class="seContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum erat non leo dapibus, et blandit lectus lobortis. Sed rhoncus tempus posuere. Etiam et mauris ex. Integer viverra nulla nec ipsum blandit consectetur. Praesent neque nunc, vestibulum nec accumsan nec, placerat a orci. Praesent suscipit mauris eget mauris posuere, quis condimentum nisl fermentum. Etiam venenatis sem et finibus molestie. Donec ut facilisis sem. Duis in tempus tortor, eget fringilla lacus. In dapibus augue quis leo auctor, vel consectetur mi dapibus. Aliquam vitae turpis urna. Sed ipsum ligula, dapibus ac erat sit amet, maximus sodales eros. Pellentesque vitae dui volutpat, gravida mauris nec, sollicitudin justo. Aliquam eu bibendum lectus.</p>
+</section>
+</body>
+</html>
